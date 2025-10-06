@@ -10,16 +10,28 @@ class TelegramService:
     def send_message(self, text):
         url = f"{self.base_url}/sendMessage"
         payload = {"chat_id": self.chat_id, "text": text}
-        resp = requests.post(url, json=payload)
-        return resp.json()
+        try:
+            resp = requests.post(url, json=payload)
+            resp.raise_for_status()
+            return resp.json()
+        except Exception as e:
+            with open("logs/telegram_service.log", "a") as log:
+                log.write(f"ERROR send_message: {e}\n")
+            return {"error": str(e)}
 
     def get_updates(self, offset=None):
         url = f"{self.base_url}/getUpdates"
         params = {"timeout": 30}
         if offset:
             params["offset"] = offset
-        resp = requests.get(url, params=params)
-        return resp.json()
+        try:
+            resp = requests.get(url, params=params)
+            resp.raise_for_status()
+            return resp.json()
+        except Exception as e:
+            with open("logs/telegram_service.log", "a") as log:
+                log.write(f"ERROR get_updates: {e}\n")
+            return {"error": str(e)}
 
     def await_approval(self, proposal_id, timeout=300):
         start = time.time()
