@@ -1,0 +1,461 @@
+        <!-- Live Bot Data -->
+        <div class="bot-data-box" style="background:#181818; border-radius:14px; box-shadow:0 2px 12px #0006; margin-bottom:30px; padding:2em;">
+            <h2 style="color:#FFD600; margin-bottom:1em;">Live Bot Data</h2>
+            <div style="display:flex; flex-wrap:wrap; gap:2em;">
+                <div style="flex:1; min-width:220px;">
+                    <h4 style="color:#FFD600;">Balans</h4>
+                    <ul id="botBalances" style="color:#fff; font-size:1.1em;"></ul>
+                </div>
+                <div style="flex:1; min-width:220px;">
+                    <h4 style="color:#FFD600;">Pairs</h4>
+                    <ul id="botPairs" style="color:#fff; font-size:1.1em; max-height:120px; overflow:auto;"></ul>
+                </div>
+                <div style="flex:1; min-width:220px;">
+                    <h4 style="color:#FFD600;">Open Orders</h4>
+                    <ul id="botOrders" style="color:#fff; font-size:1.1em; max-height:120px; overflow:auto;"></ul>
+                </div>
+            </div>
+            <div style="margin-top:2em;">
+                <h4 style="color:#FFD600;">Candles (eerste pair)</h4>
+                <pre id="botCandles" style="background:#222; color:#FFD600; border-radius:8px; padding:1em; max-height:180px; overflow:auto; font-size:0.95em;"></pre>
+            </div>
+            <div style="margin-top:2em;">
+                <h4 style="color:#FFD600;">Strategie Analyse</h4>
+                <pre id="botAnalysis" style="background:#222; color:#43ea5e; border-radius:8px; padding:1em; max-height:180px; overflow:auto; font-size:0.95em;"></pre>
+            </div>
+        </div>
+        <script>
+        // ...existing bot control script...
+        function updateBotData() {
+            fetch('/api/bot_data').then(r => r.json()).then(d => {
+                // Balances
+                const balUl = document.getElementById('botBalances');
+                balUl.innerHTML = '';
+                Object.entries(d.balances || {}).forEach(([k,v]) => {
+                    balUl.innerHTML += `<li>${k}: ${v}</li>`;
+                });
+                // Pairs
+                const pairsUl = document.getElementById('botPairs');
+                pairsUl.innerHTML = '';
+                (d.pairs || []).forEach(p => {
+                    pairsUl.innerHTML += `<li>${p}</li>`;
+                });
+                // Orders
+                const ordersUl = document.getElementById('botOrders');
+                ordersUl.innerHTML = '';
+                Object.entries(d.orders || {}).forEach(([oid, o]) => {
+                    ordersUl.innerHTML += `<li>${oid}: ${JSON.stringify(o)}</li>`;
+                });
+                // Candles (eerste pair)
+                const candlesPre = document.getElementById('botCandles');
+                const firstPair = (d.pairs && d.pairs.length) ? d.pairs[0] : null;
+                if (firstPair && d.candles && d.candles[firstPair]) {
+                    candlesPre.textContent = JSON.stringify(d.candles[firstPair], null, 2);
+                } else {
+                    candlesPre.textContent = 'Geen candles beschikbaar.';
+                }
+                // Analyse
+                const analysisPre = document.getElementById('botAnalysis');
+                analysisPre.textContent = JSON.stringify(d.analysis, null, 2);
+            });
+        }
+        setInterval(updateBotData, 60000); // elke minuut
+        updateBotData(); // initieel
+        </script>
+        <!-- Bot Control Box -->
+        <div class="bot-control-box" style="background:#181818; border-radius:14px; box-shadow:0 2px 12px #0006; margin-bottom:30px; padding:2em; text-align:center;">
+            <h2 style="color:#FFD600; margin-bottom:1em;">Bot Control</h2>
+            <div style="display:flex; align-items:center; justify-content:center; gap:2em; margin-bottom:1em;">
+                <div id="botStatusLight" style="width:32px; height:32px; border-radius:50%; background:#d32f2f; box-shadow:0 0 8px #d32f2f88; border:2px solid #333; display:inline-block; transition:background 0.3s;"></div>
+                <span id="botStatusText" style="color:#FFD600; font-weight:700; font-size:1.2em;">Status: Gestopt</span>
+            </div>
+            <button id="startBotBtn" style="background:#FFD600; color:#111; border:none; border-radius:8px; padding:0.8em 2em; font-size:1.2em; font-weight:700; cursor:pointer;">Start Bot</button>
+            <button id="stopBotBtn" style="background:#333; color:#FFD600; border:none; border-radius:8px; padding:0.8em 2em; font-size:1.2em; font-weight:700; cursor:pointer; margin-left:1em;">Stop Bot</button>
+            <div id="botMsg" style="margin-top:1em; color:#FFD600; font-weight:600;"></div>
+        </div>
+        <script>
+        function setBotStatus(status) {
+            const light = document.getElementById('botStatusLight');
+            const text = document.getElementById('botStatusText');
+            const startBtn = document.getElementById('startBotBtn');
+            const stopBtn = document.getElementById('stopBotBtn');
+            if (status === 'active') {
+                light.style.background = '#43ea5e';
+                light.style.boxShadow = '0 0 8px #43ea5e88';
+                text.textContent = 'Status: Actief';
+                startBtn.disabled = true;
+                stopBtn.disabled = false;
+            } else if (status === 'starting') {
+                light.style.background = '#FFD600';
+                light.style.boxShadow = '0 0 8px #FFD60088';
+                text.textContent = 'Status: Opstarten...';
+                startBtn.disabled = true;
+                stopBtn.disabled = true;
+            } else {
+                light.style.background = '#d32f2f';
+                light.style.boxShadow = '0 0 8px #d32f2f88';
+                text.textContent = 'Status: Gestopt';
+                startBtn.disabled = false;
+                stopBtn.disabled = true;
+            }
+        }
+        function showBotMsg(msg) {
+            document.getElementById('botMsg').textContent = msg || '';
+        }
+        document.getElementById('startBotBtn').onclick = function() {
+            showBotMsg('');
+            setBotStatus('starting');
+            fetch('/api/start_bot', {method:'POST'})
+                .then(r => r.json())
+                .then(d => {
+                    setBotStatus(d.status);
+                    if (d.message) showBotMsg(d.message);
+                });
+        };
+        document.getElementById('stopBotBtn').onclick = function() {
+            showBotMsg('');
+            setBotStatus('stopped');
+            fetch('/api/stop_bot', {method:'POST'})
+                .then(r => r.json())
+                .then(d => {
+                    setBotStatus(d.status);
+                    if (d.message) showBotMsg(d.message);
+                });
+        };
+        // Init status bij laden
+        fetch('/api/bot_data').then(r => r.json()).then(d => setBotStatus(d.status));
+        </script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AITradeBot Dashboard</title>
+    <style>
+        body {
+            font-family: 'Montserrat', Arial, sans-serif;
+            background: #111;
+            color: #f4f4f4;
+            margin: 0;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            background: #181818;
+            padding: 40px 30px;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px #000a;
+        }
+        h1 {
+            color: #ffd600;
+            font-size: 2.6rem;
+            font-weight: 700;
+            margin-bottom: 32px;
+            letter-spacing: 2px;
+        }
+        h2 {
+            color: #ffd600;
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 18px;
+        }
+        .services {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        .service {
+            background: #222;
+            padding: 32px 20px;
+            border-radius: 16px;
+            flex: 1;
+            text-align: center;
+            min-width: 220px;
+            box-shadow: 0 2px 12px #0006;
+            margin-bottom: 10px;
+            border: 2px solid #ffd600;
+        }
+        .service.running {
+            background: linear-gradient(135deg, #222 60%, #ffd600 100%);
+        }
+        .service.stopped {
+            background: linear-gradient(135deg, #222 60%, #333 100%);
+        }
+        button {
+            padding: 14px 32px;
+            border: none;
+            border-radius: 8px;
+            background: #ffd600;
+            color: #111;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 18px;
+            box-shadow: 0 2px 8px #0004;
+            transition: background 0.2s;
+        }
+        button.stop {
+            background: #111;
+            color: #ffd600;
+            border: 2px solid #ffd600;
+        }
+        button:active {
+            background: #ffe066;
+        }
+        .errors {
+            background: #222;
+            border: 1px solid #ffd600;
+            padding: 18px;
+            border-radius: 12px;
+            margin-top: 40px;
+            color: #ffd600;
+        }
+        .error-title {
+            font-weight: bold;
+            color: #ffd600;
+            font-size: 1.1rem;
+        }
+        #balance ul {
+            list-style: none;
+            padding: 0;
+        }
+        #balance li {
+            background: #222;
+            margin-bottom: 6px;
+            padding: 8px 14px;
+            border-radius: 8px;
+            color: #ffd600;
+            font-size: 1.05rem;
+        }
+        label, select {
+            font-size: 1.1rem;
+            margin-right: 10px;
+        }
+        select {
+            background: #222;
+            color: #ffd600;
+            border: 1px solid #ffd600;
+            border-radius: 6px;
+            padding: 6px 12px;
+        }
+        #candleChart {
+            background: #111;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px #0006;
+            margin-top: 18px;
+        }
+        @media (max-width: 900px) {
+            .container { padding: 18px 6px; }
+            .services { flex-direction: column; gap: 18px; }
+        }
+    </style>
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Notificatie/Alert sectie -->
+        <div id="alerts" style="margin-bottom:24px;">
+            <!-- Alerts komen hier, bijv. errors, events -->
+        </div>
+        <h1>AITradeBot Dashboard</h1>
+        <div class="services">
+            {% for name, running in service_states.items() %}
+            <div class="service {{ 'running' if running else 'stopped' }}">
+                <h2>{{ name }}</h2>
+                <p>Status: <strong>{{ 'Running' if running else 'Stopped' }}</strong></p>
+                {% if running %}
+                <form action="/stop/{{ name }}" method="get">
+                    <button class="stop">Stop</button>
+                </form>
+                {% else %}
+                <form action="/start/{{ name }}" method="get">
+                    <button>Start</button>
+                </form>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+
+        <div style="margin-bottom:30px; display:flex; gap:40px; flex-wrap:wrap;">
+            <div style="flex:2; min-width:220px;">
+                <h2>Actuele Balans</h2>
+                <div id="balance"></div>
+            </div>
+            <div style="flex:2; min-width:220px;">
+                <h2>Actieve Trades / Open Orders</h2>
+                <div id="orders">(Nog geen actieve trades)</div>
+            </div>
+        </div>
+
+        <div style="margin-bottom:30px;">
+            <h2>Marktselectie</h2>
+            <label for="pair">Pair:</label>
+            <select id="pair"></select>
+            <label for="interval">Timeframe:</label>
+            <select id="interval">
+                <option value="1">1m</option>
+                <option value="5">5m</option>
+                <option value="15">15m</option>
+                <option value="60">1h</option>
+            </select>
+            <button onclick="loadCandles()">Toon Candles</button>
+        </div>
+
+        <div style="margin-bottom:30px;">
+            <h2>Candlestick Grafiek</h2>
+            <canvas id="candleChart" width="900" height="400"></canvas>
+        </div>
+        <!-- Performance Box -->
+        <div class="performance-box" style="background:#181818; border-radius:14px; box-shadow:0 2px 12px #0006; margin-bottom:30px; padding:2em;">
+            <h2 style="color:#FFD600; margin-bottom:1em;">Performance</h2>
+            <div style="display:flex; gap:2em; flex-wrap:wrap;">
+                <div style="flex:1; min-width:180px;">
+                    <h4 style="color:#FFD600;">Win/Loss Ratio</h4>
+                    <div style="font-size:2em; color:#fff;">-</div>
+                </div>
+                <div style="flex:1; min-width:180px;">
+                    <h4 style="color:#FFD600;">Equity Curve</h4>
+                    <canvas id="equityCurveChart" width="220" height="80" style="background:#222; border-radius:8px;"></canvas>
+                </div>
+                <div style="flex:1; min-width:180px;">
+                    <h4 style="color:#FFD600;">Badges</h4>
+                    <div style="display:flex; gap:0.5em;">
+                        <span style="background:#FFD600; color:#111; border-radius:6px; padding:0.3em 0.8em; font-weight:700;">Pro</span>
+                        <span style="background:#FFD600; color:#111; border-radius:6px; padding:0.3em 0.8em; font-weight:700;">Live</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trade Alerts Box -->
+        <div class="trade-alerts-box" style="background:#181818; border-radius:14px; box-shadow:0 2px 12px #0006; margin-bottom:30px; padding:2em;">
+            <h2 style="color:#FFD600; margin-bottom:1em;">Trade Alerts</h2>
+            <div id="trade-alerts" style="color:#fff; min-height:40px;">
+                <p style="color:#888;">Geen recente trades.</p>
+            </div>
+        </div>
+        <!-- Monitoring Box -->
+        <div style="margin-bottom:30px;">
+            <h2>Monitoring</h2>
+            <div id="monitoring">
+                <ul>
+                    <li>API latency: <span id="api-latency">-</span> ms</li>
+                    <li>DB status: <span id="db-status">-</span></li>
+                    <li>Candle sync: <span id="candle-sync">-</span></li>
+                    <li>Error logs: <span id="error-logs">-</span></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer style="text-align:center; color:#888; margin-top:40px; font-size:0.95rem;">
+            <hr style="border:1px solid #23262f; margin-bottom:12px;">
+        </footer>
+
+        <div class="errors">
+            <div class="error-title">Recent Errors</div>
+            {% if errors %}
+                <ul>
+                {% for log, err in errors %}
+                    <li><strong>{{ log }}:</strong> {{ err }}</li>
+                {% endfor %}
+                </ul>
+            {% else %}
+                <p>Geen errors gevonden.</p>
+            {% endif %}
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-financial@3.3.0/dist/chartjs-chart-financial.min.js"></script>
+    <script>
+    async function fetchBalances() {
+        const res = await fetch('/api/balances');
+        const data = await res.json();
+        let html = '<ul>';
+        for (const [asset, value] of Object.entries(data)) {
+            html += `<li><strong>${asset}:</strong> ${value}</li>`;
+        }
+        html += '</ul>';
+        document.getElementById('balance').innerHTML = html;
+    }
+
+    async function fetchPairs() {
+        const res = await fetch('/api/pairs');
+        const pairs = await res.json();
+        const select = document.getElementById('pair');
+        select.innerHTML = '';
+        for (const pair of pairs) {
+            const opt = document.createElement('option');
+            opt.value = pair;
+            opt.text = pair;
+            select.appendChild(opt);
+        }
+    }
+
+    async function loadCandles() {
+        const pair = document.getElementById('pair').value;
+        const interval = document.getElementById('interval').value;
+        const res = await fetch(`/api/candles?pair=${pair}&interval=${interval}`);
+        const data = await res.json();
+        if (!data || !data.time) {
+            alert('Geen candle data beschikbaar.');
+            return;
+        }
+        // Prepare candlestick data for Chart.js Financial
+        const candles = [];
+        for (let i = 0; i < data.time.length; i++) {
+            candles.push({
+                x: new Date(data.time[i]*1000),
+                o: data.open[i],
+                h: data.high[i],
+                l: data.low[i],
+                c: data.close[i]
+            });
+        }
+        renderChart(candles);
+    }
+
+    let chart;
+    function renderChart(candles) {
+        const ctx = document.getElementById('candleChart').getContext('2d');
+        if (chart) chart.destroy();
+        chart = new Chart(ctx, {
+            type: 'candlestick',
+            data: {
+                datasets: [{
+                    label: 'Candles',
+                    data: candles,
+                    borderColor: '#2c3e50',
+                    color: {
+                        up: '#26a69a',
+                        down: '#ef5350',
+                        unchanged: '#999'
+                    },
+                    nullLine: true // TradingView-style null line
+                }]
+            },
+            options: {
+                plugins: {
+                    legend: { display: false }
+                },
+                scales: {
+                    x: {
+                        type: 'time',
+                        time: { unit: 'minute' },
+                        grid: { color: '#eee' }
+                    },
+                    y: {
+                        beginAtZero: true,
+                        grid: { color: '#eee' }
+                    }
+                }
+            }
+        });
+    }
+
+    // Initial load
+    fetchBalances();
+    fetchPairs();
+    </script>
+</body>
+</html>

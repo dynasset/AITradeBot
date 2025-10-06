@@ -1,0 +1,1 @@
+# Kraken module migrated from old structure

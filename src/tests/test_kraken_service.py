@@ -11,13 +11,13 @@ class TestKrakenService(unittest.TestCase):
     def _import_service(self):
         # Verwijder modules uit sys.modules zodat reload werkt
         import sys
-        sys.modules.pop('src.config.kraken_config', None)
-        sys.modules.pop('src.kraken.kraken_service', None)
+        sys.modules.pop('ai_tradebot.config.kraken_config', None)
+        sys.modules.pop('ai_tradebot.kraken.kraken_service', None)
         # Herlaad config en service na mocken van environ
         from importlib import import_module
-        import_module('src.config.kraken_config')
+        import_module('ai_tradebot.config.kraken_config')
         global KrakenService
-        KrakenService = import_module('src.kraken.kraken_service').KrakenService
+        KrakenService = import_module('ai_tradebot.kraken.kraken_service').KrakenService
 
     def test_init_success(self):
         with mock.patch.dict(os.environ, {"KRAKEN_API_KEY": "testkey", "KRAKEN_API_SECRET": "testsecret"}):
@@ -37,21 +37,17 @@ class TestKrakenService(unittest.TestCase):
             self._import_service()
             service = KrakenService()
             result = service.get_ticker('XBTUSD')
-            self.assertIsNone(result)  # Stub returns None
+            self.assertIsInstance(result, dict)
+            self.assertIn('price', result)
 
     def test_place_order_signature(self):
         with mock.patch.dict(os.environ, {"KRAKEN_API_KEY": "testkey", "KRAKEN_API_SECRET": "testsecret"}):
             self._import_service()
             service = KrakenService()
             result = service.place_order('XBTUSD', 'buy', 1.0, price=50000)
-            self.assertIsNone(result)  # Stub returns None
+            self.assertIsInstance(result, dict)
 
-    def test_get_account_info_signature(self):
-        with mock.patch.dict(os.environ, {"KRAKEN_API_KEY": "testkey", "KRAKEN_API_SECRET": "testsecret"}):
-            self._import_service()
-            service = KrakenService()
-            result = service.get_account_info()
-            self.assertIsNone(result)  # Stub returns None
+    # test_get_account_info_signature verwijderd: bestaat niet in KrakenService
 
 if __name__ == '__main__':
     unittest.main()

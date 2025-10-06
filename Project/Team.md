@@ -14,6 +14,7 @@ Hieronder vind je een overzicht van het golden team voor dit project.
 | Eelco      | DevOps Engineer         |
 | Nolan      | Tester/QA Engineer      |
 | Stephanie  | Code Reviewer           |
+| Sanne      | UX/UI Designer          |
 
 ## Rollen en verantwoordelijkheden
 
@@ -65,3 +66,10 @@ Hieronder vind je een overzicht van het golden team voor dit project.
 **Taken:** Zij beoordeelt pull requests, geeft feedback en zorgt dat de codebase netjes en robuust blijft.
 **Ervaring:** 13 jaar ervaring als senior developer en reviewer bij internationale projecten.
 **Vaardigheden:** Code review, refactoring, documentatie, en het waarborgen van best practices in softwareontwikkeling.
+
+### UX/UI Designer: Sanne
+
+**Profiel:** Sanne is verantwoordelijk voor de gebruikerservaring en visuele feedback van het dashboard en alle user-facing componenten.
+**Taken:** Zij verbetert de interactie, maakt het dashboard responsief en zorgt voor duidelijke visuele feedback en foutmeldingen. Sanne werkt samen met developers en reviewers om de frontend optimaal te laten aansluiten op de backend.
+**Ervaring:** 9 jaar ervaring in UX/UI design, met focus op trading dashboards en data-visualisatie.
+**Vaardigheden:** UX research, wireframing, frontend development, visuele feedback, responsive design, en usability testing.
