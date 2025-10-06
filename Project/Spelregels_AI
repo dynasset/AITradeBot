@@ -1,0 +1,32 @@
+## Workflow
+
+Deze workflow is door het team vastgesteld en mag niet worden aangepast of genegeerd:
+
+1. Nieuwe feature of wijziging wordt eerst besproken in het team en goedgekeurd door de Product Owner.
+2. Daan (Architect) bepaalt de technische aanpak en documenteert deze.
+3. Developers (Nico & Rico) bouwen de feature volgens de afgesproken structuur en conventies.
+4. Elke codewijziging wordt voorzien van automatische tests door Nolan (QA).
+5. Code wordt aangeboden via een pull request en gereviewd door Stephanie (Code Reviewer).
+6. Alleen bij een succesvolle review én alle tests groen mag de code worden gemerged.
+7. Documentatie wordt direct bijgewerkt bij elke relevante wijziging.
+
+Afwijken van deze workflow is niet toegestaan. Elke stap is verplicht en wordt door het team gehandhaafd.
+# Spelregels
+
+## Team Spelregels
+
+1. Nieuwe functionaliteit wordt alleen toegevoegd na goedkeuring van de Product Owner.
+2. Code wordt geschreven volgens afgesproken structuur en conventies.
+3. Architectuurkeuzes en technische beslissingen worden vooraf besproken en vastgelegd.
+4. Elke wijziging vereist automatische tests; geen merges bij falende tests.
+5. Pull requests zijn verplicht en worden gereviewd op logica, consistentie en technische kwaliteit.
+6. Refactoring en duidelijke commit messages zijn standaard.
+7. Documentatie wordt bijgehouden bij elke relevante wijziging.
+
+## Doel van het project
+
+Een tradingbot bouwen die de strategie van de Product Owner automatiseert en 24/7 kan handelen op beschikbare markten.
+
+## Overige informatie
+
+Deze spelregels zijn vastgesteld door het DevOps-team en gelden voor alle teamleden en bijdragen aan het project.

@@ -1,0 +1,6 @@
+2025-10-05 11:55:33,602 INFO root Order request: {'pair': 'USDCUSD', 'type': 'buy', 'ordertype': 'limit', 'volume': 1.0, 'price': 0.9998}
+2025-10-05 11:55:33,666 INFO root Order response: {'error': ['EGeneral:Invalid arguments:volume minimum not met']}
+2025-10-05 12:22:33,792 INFO root Order request: {'pair': 'USDCUSD', 'type': 'buy', 'ordertype': 'limit', 'volume': 1.0, 'price': 0.9998}
+2025-10-05 12:22:33,856 INFO root Order response: {'error': ['EGeneral:Invalid arguments:volume minimum not met']}
+2025-10-05 12:34:52,523 INFO root Order request: {'pair': 'USDCUSD', 'type': 'buy', 'ordertype': 'limit', 'volume': 1.0, 'price': 0.9998}
+2025-10-05 12:34:52,579 INFO root Order response: {'error': ['EGeneral:Invalid arguments:volume minimum not met']}

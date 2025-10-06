@@ -1,8 +1,17 @@
 import logging
 import requests
+from ai_tradebot.config.kraken_config import KRAKEN_API_KEY, KRAKEN_API_SECRET
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s %(levelname)s %(name)s %(message)s',
+    handlers=[
+        logging.FileHandler("kraken_service.log"),
+        logging.StreamHandler()
+    ]
+)
+import logging
+import requests
 from src.config.kraken_config import KRAKEN_API_KEY, KRAKEN_API_SECRET
-
-# Configureer centrale logging
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s %(levelname)s %(name)s %(message)s',
@@ -41,6 +50,39 @@ class KrakenService:
             raise ValueError("Kraken API credentials niet gevonden of leeg in environment.")
         self.api_key = KRAKEN_API_KEY
         self.api_secret = KRAKEN_API_SECRET
+
+    def get_ohlc(self, pair: str, interval: int = 1, limit: int = 100):
+        """
+        Haalt OHLC data op voor een pair en interval via Kraken API.
+        Returns:
+            pd.DataFrame: OHLC data
+        """
+        import pandas as pd
+        url = "https://api.kraken.com/0/public/OHLC"
+        params = {"pair": pair, "interval": interval}
+        try:
+            response = requests.get(url, params=params)
+            response.raise_for_status()
+            data = response.json()
+            result = data.get("result", {})
+            ohlc = None
+            for k in result:
+                if k != "last":
+                    ohlc = result[k]
+                    break
+            if not ohlc:
+                return None
+            df = pd.DataFrame(ohlc, columns=[
+                "time", "open", "high", "low", "close", "vwap", "volume", "count"
+            ])
+            try:
+                df = df.apply(pd.to_numeric)
+            except Exception as e:
+                logging.warning(f"Kon sommige kolommen niet converteren naar numeriek: {e}")
+            return df.tail(limit)
+        except Exception as e:
+            logging.error(f"Fout bij ophalen OHLC data voor {pair} ({interval}m): {e}")
+            return None
 
     def get_min_order_size(self, pair: str) -> float:
         """
