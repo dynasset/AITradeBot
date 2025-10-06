@@ -1,4 +1,6 @@
-## Workflow
+
+
+# Workflow
 
 Deze workflow is door het team vastgesteld en mag niet worden aangepast of genegeerd:
 
@@ -11,7 +13,8 @@ Deze workflow is door het team vastgesteld en mag niet worden aangepast of geneg
 7. Documentatie wordt direct bijgewerkt bij elke relevante wijziging.
 
 Afwijken van deze workflow is niet toegestaan. Elke stap is verplicht en wordt door het team gehandhaafd.
-# Spelregels
+
+## Spelregels
 
 ## Team Spelregels
 
@@ -23,9 +26,11 @@ Afwijken van deze workflow is niet toegestaan. Elke stap is verplicht en wordt d
 6. Refactoring en duidelijke commit messages zijn standaard.
 7. Documentatie wordt bijgehouden bij elke relevante wijziging.
 
+
 ## Doel van het project
 
 Een tradingbot bouwen die de strategie van de Product Owner automatiseert en 24/7 kan handelen op beschikbare markten.
+
 
 ## Overige informatie
 
