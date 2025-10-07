@@ -1,0 +1,20 @@
+# Monitoring Integratie
+
+## Aanpak
+- Gebruik Prometheus voor metrics scraping
+- Gebruik Grafana voor dashboards en alerts
+- Voeg een voorbeeld Prometheus config toe: `prometheus.yml`
+- Voeg instructies toe aan Deployment.md
+
+## Voorbeeld Prometheus config
+
+```
+scrape_configs:
+  - job_name: 'aitradebot'
+    static_configs:
+      - targets: ['localhost:8000']
+```
+
+## Integratie
+- Voeg een endpoint toe in de bot voor Prometheus metrics (bijvoorbeeld `/metrics` via Flask)
+- Documenteer setup en dashboard in Deployment.md

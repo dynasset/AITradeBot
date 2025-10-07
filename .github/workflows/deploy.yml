@@ -1,0 +1,42 @@
+      - name: Notificatie bij pipeline-fouten
+        if: failure()
+        run: |
+          echo "Pipeline-fout! Notificatie sturen naar Slack, mail of Telegram..."
+          # Voeg hier het echte notificatie-script toe, bijvoorbeeld curl naar webhook
+          echo "Notificatie verzonden."
+name: Deploy
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Run tests
+        run: pytest
+      - name: Deploy to test environment
+        env:
+          DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+        run: |
+          echo "Deploying to test environment..."
+          # Voeg hier het echte deployment script toe, bijvoorbeeld rsync/scp/docker/kubectl
+          # Voorbeeld: scp -i $DEPLOY_KEY -r src/ user@server:/path/to/deploy
+          echo "Deployment voltooid."
+        - name: Rollback bij mislukte deployment
+          if: failure()
+          run: |
+            echo "Deployment mislukt, rollback uitvoeren..."
+            # Voeg hier het rollback-script toe, bijvoorbeeld terugzetten van vorige release
+            echo "Rollback voltooid."

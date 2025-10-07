@@ -13,6 +13,6 @@ def render_order_proposal(pair, strategy, order_type, entry, stop, tp, volume):
         ),
         "buttons": [
             {"text": "✅ Ja", "callback_data": "approve"},
-            {"text": "❌ Nee", "callback_data": "reject"}
-        ]
+            {"text": "❌ Nee", "callback_data": "reject"},
+        ],
     }

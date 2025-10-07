@@ -2,6 +2,37 @@ import requests
 import time
 
 class TelegramService:
+    def handle_update(self, update, on_start=None, on_stop=None, on_order_approve=None, on_order_reject=None):
+        # Afhandeling van inkomende Telegram updates (messages/callbacks)
+        if 'message' in update:
+            msg = update['message']
+            text = msg.get('text', '').lower()
+            if 'start' in text and on_start:
+                on_start()
+                self.send_message("Bot gestart!")
+            elif 'stop' in text and on_stop:
+                on_stop()
+                self.send_message("Bot gestopt!")
+        elif 'callback_query' in update:
+            cq = update['callback_query']
+            data = cq.get('data')
+            if data == 'approve' and on_order_approve:
+                on_order_approve()
+                self.send_message("Order goedgekeurd en geplaatst!")
+            elif data == 'reject' and on_order_reject:
+                on_order_reject()
+                self.send_message("Order afgekeurd.")
+
+    def poll_updates(self, last_update_id=None, on_start=None, on_stop=None, on_order_approve=None, on_order_reject=None):
+        # Poll Telegram voor nieuwe updates en handel ze af
+        offset = last_update_id
+        while True:
+            updates = self.get_updates(offset)
+            if 'result' in updates:
+                for update in updates['result']:
+                    offset = update['update_id'] + 1
+                    self.handle_update(update, on_start, on_stop, on_order_approve, on_order_reject)
+            time.sleep(2)
     def __init__(self, token, chat_id=None):
         self.token = token
         self.base_url = f"https://api.telegram.org/bot{token}"
@@ -16,6 +47,9 @@ class TelegramService:
             }
         try:
             resp = requests.post(url, json=payload)
+            with open("logs/telegram_service.log", "a") as log:
+                log.write(f"SEND_MESSAGE payload: {payload}\n")
+                log.write(f"SEND_MESSAGE response: {resp.text}\n")
             resp.raise_for_status()
             return resp.json()
         except Exception as e:

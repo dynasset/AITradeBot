@@ -1,3 +1,194 @@
-ERROR send_message: 404 Client Error: Not Found for url: https://api.telegram.org/botdummy/sendMessage
-ERROR send_message: 404 Client Error: Not Found for url: https://api.telegram.org/botdummy/sendMessage
-ERROR send_message: 404 Client Error: Not Found for url: https://api.telegram.org/botdummy/sendMessage
+SEND_MESSAGE payload: {'chat_id': '1577940521', 'text': 'Bot gestart! Trade kansen worden nu gepusht.'}
+SEND_MESSAGE response: {"ok":true,"result":{"message_id":630,"from":{"id":7685158113,"is_bot":true,"first_name":"BotjeVoorMijnPotje","username":"BotjeVoorMijnPotje_bot"},"chat":{"id":1577940521,"first_name":"Sebastiaan","last_name":"Koopman","username":"SKoopman88","type":"private"},"date":1759781748,"text":"Bot gestart! Trade kansen worden nu gepusht."}}
+SEND_MESSAGE payload: {'chat_id': '1577940521', 'text': 'Bot gestart!'}
+SEND_MESSAGE response: {"ok":true,"result":{"message_id":631,"from":{"id":7685158113,"is_bot":true,"first_name":"BotjeVoorMijnPotje","username":"BotjeVoorMijnPotje_bot"},"chat":{"id":1577940521,"first_name":"Sebastiaan","last_name":"Koopman","username":"SKoopman88","type":"private"},"date":1759781749,"text":"Bot gestart!"}}
+SEND_MESSAGE payload: {'chat_id': '1577940521', 'text': 'Bot gestart! Trade kansen worden nu gepusht.'}
+SEND_MESSAGE response: {"ok":true,"result":{"message_id":632,"from":{"id":7685158113,"is_bot":true,"first_name":"BotjeVoorMijnPotje","username":"BotjeVoorMijnPotje_bot"},"chat":{"id":1577940521,"first_name":"Sebastiaan","last_name":"Koopman","username":"SKoopman88","type":"private"},"date":1759781749,"text":"Bot gestart! Trade kansen worden nu gepusht."}}
+SEND_MESSAGE payload: {'chat_id': '1577940521', 'text': 'Bot gestart!'}
+SEND_MESSAGE response: {"ok":true,"result":{"message_id":633,"from":{"id":7685158113,"is_bot":true,"first_name":"BotjeVoorMijnPotje","username":"BotjeVoorMijnPotje_bot"},"chat":{"id":1577940521,"first_name":"Sebastiaan","last_name":"Koopman","username":"SKoopman88","type":"private"},"date":1759781749,"text":"Bot gestart!"}}
+SEND_MESSAGE payload: {'chat_id': '1577940521', 'text': 'Bot gestart! Trade kansen worden nu gepusht.'}
+SEND_MESSAGE response: {"ok":true,"result":{"message_id":635,"from":{"id":7685158113,"is_bot":true,"first_name":"BotjeVoorMijnPotje","username":"BotjeVoorMijnPotje_bot"},"chat":{"id":1577940521,"first_name":"Sebastiaan","last_name":"Koopman","username":"SKoopman88","type":"private"},"date":1759781771,"text":"Bot gestart! Trade kansen worden nu gepusht."}}
+SEND_MESSAGE payload: {'chat_id': '1577940521', 'text': 'Bot gestart!'}
+SEND_MESSAGE response: {"ok":true,"result":{"message_id":636,"from":{"id":7685158113,"is_bot":true,"first_name":"BotjeVoorMijnPotje","username":"BotjeVoorMijnPotje_bot"},"chat":{"id":1577940521,"first_name":"Sebastiaan","last_name":"Koopman","username":"SKoopman88","type":"private"},"date":1759781772,"text":"Bot gestart!"}}
+SEND_MESSAGE payload: {'chat_id': '1577940521', 'text': 'Bot gestart! Trade kansen worden nu gepusht.'}
+SEND_MESSAGE response: {"ok":true,"result":{"message_id":638,"from":{"id":7685158113,"is_bot":true,"first_name":"BotjeVoorMijnPotje","username":"BotjeVoorMijnPotje_bot"},"chat":{"id":1577940521,"first_name":"Sebastiaan","last_name":"Koopman","username":"SKoopman88","type":"private"},"date":1759781893,"text":"Bot gestart! Trade kansen worden nu gepusht."}}
+SEND_MESSAGE payload: {'chat_id': '1577940521', 'text': 'Bot gestart!'}
+SEND_MESSAGE response: {"ok":true,"result":{"message_id":639,"from":{"id":7685158113,"is_bot":true,"first_name":"BotjeVoorMijnPotje","username":"BotjeVoorMijnPotje_bot"},"chat":{"id":1577940521,"first_name":"Sebastiaan","last_name":"Koopman","username":"SKoopman88","type":"private"},"date":1759781893,"text":"Bot gestart!"}}
+SEND_MESSAGE payload: {'chat_id': '1577940521', 'text': 'Bot gestart! Dashboard status: actief.'}
+SEND_MESSAGE response: {"ok":true,"result":{"message_id":641,"from":{"id":7685158113,"is_bot":true,"first_name":"BotjeVoorMijnPotje","username":"BotjeVoorMijnPotje_bot"},"chat":{"id":1577940521,"first_name":"Sebastiaan","last_name":"Koopman","username":"SKoopman88","type":"private"},"date":1759781917,"text":"Bot gestart! Dashboard status: actief."}}
+SEND_MESSAGE payload: {'chat_id': '1577940521', 'text': 'Bot gestart!'}
+SEND_MESSAGE response: {"ok":true,"result":{"message_id":642,"from":{"id":7685158113,"is_bot":true,"first_name":"BotjeVoorMijnPotje","username":"BotjeVoorMijnPotje_bot"},"chat":{"id":1577940521,"first_name":"Sebastiaan","last_name":"Koopman","username":"SKoopman88","type":"private"},"date":1759781918,"text":"Bot gestart!"}}
+SEND_MESSAGE payload: {'chat_id': '1577940521', 'text': 'Bot gestart! Dashboard status: actief.'}
+SEND_MESSAGE response: {"ok":true,"result":{"message_id":645,"from":{"id":7685158113,"is_bot":true,"first_name":"BotjeVoorMijnPotje","username":"BotjeVoorMijnPotje_bot"},"chat":{"id":1577940521,"first_name":"Sebastiaan","last_name":"Koopman","username":"SKoopman88","type":"private"},"date":1759782009,"text":"Bot gestart! Dashboard status: actief."}}
+SEND_MESSAGE payload: {'chat_id': '1577940521', 'text': 'Bot gestart!'}
+SEND_MESSAGE response: {"ok":true,"result":{"message_id":646,"from":{"id":7685158113,"is_bot":true,"first_name":"BotjeVoorMijnPotje","username":"BotjeVoorMijnPotje_bot"},"chat":{"id":1577940521,"first_name":"Sebastiaan","last_name":"Koopman","username":"SKoopman88","type":"private"},"date":1759782009,"text":"Bot gestart!"}}
+SEND_MESSAGE payload: {'chat_id': 123456, 'text': 'Testbericht'}
+SEND_MESSAGE response: {"ok":false,"error_code":404,"description":"Not Found"}
+Netwerkfout send_message: 404 Client Error: Not Found for url: https://api.telegram.org/botdummy/sendMessage
+SEND_MESSAGE payload: {'chat_id': 123, 'text': 'Test'}
+SEND_MESSAGE response: {}
+SEND_MESSAGE payload: {'chat_id': '1577940521', 'text': "Bot gestart! (dashboard status error: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/start_bot (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7b61afb4e3f0>: Failed to establish a new connection: [Errno 111] Connection refused')))"}
+SEND_MESSAGE response: {"ok":true,"result":{"message_id":648,"from":{"id":7685158113,"is_bot":true,"first_name":"BotjeVoorMijnPotje","username":"BotjeVoorMijnPotje_bot"},"chat":{"id":1577940521,"first_name":"Sebastiaan","last_name":"Koopman","username":"SKoopman88","type":"private"},"date":1759828257,"text":"Bot gestart! (dashboard status error: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/start_bot (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7b61afb4e3f0>: Failed to establish a new connection: [Errno 111] Connection refused')))"}}
+SEND_MESSAGE payload: {'chat_id': '1577940521', 'text': 'Bot gestart!'}
+SEND_MESSAGE response: {"ok":true,"result":{"message_id":649,"from":{"id":7685158113,"is_bot":true,"first_name":"BotjeVoorMijnPotje","username":"BotjeVoorMijnPotje_bot"},"chat":{"id":1577940521,"first_name":"Sebastiaan","last_name":"Koopman","username":"SKoopman88","type":"private"},"date":1759828258,"text":"Bot gestart!"}}
+SEND_MESSAGE payload: {'chat_id': '1577940521', 'text': 'Bot gestart! Dashboard status: actief.'}
+SEND_MESSAGE response: {"ok":true,"result":{"message_id":651,"from":{"id":7685158113,"is_bot":true,"first_name":"BotjeVoorMijnPotje","username":"BotjeVoorMijnPotje_bot"},"chat":{"id":1577940521,"first_name":"Sebastiaan","last_name":"Koopman","username":"SKoopman88","type":"private"},"date":1759828425,"text":"Bot gestart! Dashboard status: actief."}}
+SEND_MESSAGE payload: {'chat_id': '1577940521', 'text': 'Bot gestart!'}
+SEND_MESSAGE response: {"ok":true,"result":{"message_id":652,"from":{"id":7685158113,"is_bot":true,"first_name":"BotjeVoorMijnPotje","username":"BotjeVoorMijnPotje_bot"},"chat":{"id":1577940521,"first_name":"Sebastiaan","last_name":"Koopman","username":"SKoopman88","type":"private"},"date":1759828425,"text":"Bot gestart!"}}
+SEND_MESSAGE payload: {'chat_id': '1577940521', 'text': 'Bot gestopt! Dashboard status: inactief.'}
+SEND_MESSAGE response: {"ok":true,"result":{"message_id":655,"from":{"id":7685158113,"is_bot":true,"first_name":"BotjeVoorMijnPotje","username":"BotjeVoorMijnPotje_bot"},"chat":{"id":1577940521,"first_name":"Sebastiaan","last_name":"Koopman","username":"SKoopman88","type":"private"},"date":1759828434,"text":"Bot gestopt! Dashboard status: inactief."}}
+SEND_MESSAGE payload: {'chat_id': '1577940521', 'text': 'Bot gestopt!'}
+SEND_MESSAGE response: {"ok":true,"result":{"message_id":656,"from":{"id":7685158113,"is_bot":true,"first_name":"BotjeVoorMijnPotje","username":"BotjeVoorMijnPotje_bot"},"chat":{"id":1577940521,"first_name":"Sebastiaan","last_name":"Koopman","username":"SKoopman88","type":"private"},"date":1759828434,"text":"Bot gestopt!"}}
+SEND_MESSAGE payload: {'chat_id': '1577940521', 'text': 'Bot gestart! Dashboard status: actief.'}
+SEND_MESSAGE response: {"ok":true,"result":{"message_id":658,"from":{"id":7685158113,"is_bot":true,"first_name":"BotjeVoorMijnPotje","username":"BotjeVoorMijnPotje_bot"},"chat":{"id":1577940521,"first_name":"Sebastiaan","last_name":"Koopman","username":"SKoopman88","type":"private"},"date":1759828439,"text":"Bot gestart! Dashboard status: actief."}}
+SEND_MESSAGE payload: {'chat_id': '1577940521', 'text': 'Bot gestart!'}
+SEND_MESSAGE response: {"ok":true,"result":{"message_id":659,"from":{"id":7685158113,"is_bot":true,"first_name":"BotjeVoorMijnPotje","username":"BotjeVoorMijnPotje_bot"},"chat":{"id":1577940521,"first_name":"Sebastiaan","last_name":"Koopman","username":"SKoopman88","type":"private"},"date":1759828440,"text":"Bot gestart!"}}
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987404
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30
+SEND_MESSAGE payload: {'chat_id': '1577940521', 'text': "Bot gestart! (dashboard status error: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/start_bot (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7b61afebce60>: Failed to establish a new connection: [Errno 111] Connection refused')))"}
+SEND_MESSAGE response: {"ok":true,"result":{"message_id":661,"from":{"id":7685158113,"is_bot":true,"first_name":"BotjeVoorMijnPotje","username":"BotjeVoorMijnPotje_bot"},"chat":{"id":1577940521,"first_name":"Sebastiaan","last_name":"Koopman","username":"SKoopman88","type":"private"},"date":1759828532,"text":"Bot gestart! (dashboard status error: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/start_bot (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7b61afebce60>: Failed to establish a new connection: [Errno 111] Connection refused')))"}}
+SEND_MESSAGE payload: {'chat_id': '1577940521', 'text': 'Bot gestart!'}
+SEND_MESSAGE response: {"ok":true,"result":{"message_id":662,"from":{"id":7685158113,"is_bot":true,"first_name":"BotjeVoorMijnPotje","username":"BotjeVoorMijnPotje_bot"},"chat":{"id":1577940521,"first_name":"Sebastiaan","last_name":"Koopman","username":"SKoopman88","type":"private"},"date":1759828533,"text":"Bot gestart!"}}
+SEND_MESSAGE payload: {'chat_id': '1577940521', 'text': "Bot gestart! (dashboard status error: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/start_bot (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7e9d1cfd3cb0>: Failed to establish a new connection: [Errno 111] Connection refused')))"}
+SEND_MESSAGE response: {"ok":true,"result":{"message_id":663,"from":{"id":7685158113,"is_bot":true,"first_name":"BotjeVoorMijnPotje","username":"BotjeVoorMijnPotje_bot"},"chat":{"id":1577940521,"first_name":"Sebastiaan","last_name":"Koopman","username":"SKoopman88","type":"private"},"date":1759828533,"text":"Bot gestart! (dashboard status error: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/start_bot (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7e9d1cfd3cb0>: Failed to establish a new connection: [Errno 111] Connection refused')))"}}
+SEND_MESSAGE payload: {'chat_id': '1577940521', 'text': 'Bot gestart!'}
+SEND_MESSAGE response: {"ok":true,"result":{"message_id":664,"from":{"id":7685158113,"is_bot":true,"first_name":"BotjeVoorMijnPotje","username":"BotjeVoorMijnPotje_bot"},"chat":{"id":1577940521,"first_name":"Sebastiaan","last_name":"Koopman","username":"SKoopman88","type":"private"},"date":1759828534,"text":"Bot gestart!"}}
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30&offset=634987405
+Netwerkfout get_updates: 409 Client Error: Conflict for url: https://api.telegram.org/bot7685158113:AAGg4eCV-mLj90MuRKVudL7f3hN7OnM0SNo/getUpdates?timeout=30

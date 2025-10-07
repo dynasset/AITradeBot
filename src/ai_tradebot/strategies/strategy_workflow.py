@@ -7,6 +7,7 @@ import pandas as pd
 
 STRATEGY_MODULES = [
     "ai_tradebot.strategies.scalper",
+    "ai_tradebot.strategies.smc_cotton",
 ]
 
 def load_strategies():

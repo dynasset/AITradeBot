@@ -1,6 +1,7 @@
 import requests
 import time
 
+
 class TelegramService:
     def __init__(self, token, chat_id=None):
         self.token = token
@@ -12,7 +13,12 @@ class TelegramService:
         payload = {"chat_id": self.chat_id, "text": text}
         if buttons:
             payload["reply_markup"] = {
-                "inline_keyboard": [[{"text": b["text"], "callback_data": b["callback_data"]} for b in buttons]]
+                "inline_keyboard": [
+                    [
+                        {"text": b["text"], "callback_data": b["callback_data"]}
+                        for b in buttons
+                    ]
+                ]
             }
         try:
             resp = requests.post(url, json=payload)
@@ -25,10 +31,13 @@ class TelegramService:
 
     def send_template(self, template_name, **params):
         # Dynamisch template ophalen en renderen uit notifications/telegram
-        if template_name == 'order_proposal':
-            from ai_tradebot.notifications.telegram.order_proposal import render_order_proposal
+        if template_name == "order_proposal":
+            from ai_tradebot.notifications.telegram.order_proposal import (
+                render_order_proposal,
+            )
+
             tpl = render_order_proposal(**params)
-            self.send_message(tpl['text'], buttons=tpl.get('buttons'))
+            self.send_message(tpl["text"], buttons=tpl.get("buttons"))
         # Voeg hier meer templates toe
 
     def get_updates(self, offset=None):
@@ -55,9 +64,13 @@ class TelegramService:
                     offset = update["update_id"] + 1
                     msg = update.get("message", {})
                     text = msg.get("text", "")
-                    if proposal_id in text and ("ja" in text.lower() or "yes" in text.lower()):
+                    if proposal_id in text and (
+                        "ja" in text.lower() or "yes" in text.lower()
+                    ):
                         return True
-                    if proposal_id in text and ("nee" in text.lower() or "no" in text.lower()):
+                    if proposal_id in text and (
+                        "nee" in text.lower() or "no" in text.lower()
+                    ):
                         return False
             time.sleep(2)
         return False

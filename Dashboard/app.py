@@ -5,7 +5,7 @@ import threading
 import time
 from threading import Thread, Event
 from flask import Flask, render_template, redirect, url_for, request, jsonify
-from .candles_db import init_db, insert_candles, get_candles, clear_db
+from Dashboard.candles_db import init_db, insert_candles, get_candles, clear_db
 from ai_tradebot.kraken.kraken_service import KrakenService
 app = Flask(__name__)
 bot_active = Event()
