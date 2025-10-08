@@ -32,7 +32,7 @@ def analyse_breaker_block_reversal(multi_df: dict, equity: float) -> dict:
         position_size = (equity * 0.02) / risk
         tp = entry + risk if impuls_up else entry - risk
         order = {
-            'pair': None,
+            'pair': multi_df.get('pair'),
             'type': 'buy' if impuls_up else 'sell',
             'entry': entry,
             'stop': stop,
@@ -66,7 +66,7 @@ def analyse_liquidity_sweep_momentum(multi_df: dict, equity: float) -> dict:
         position_size = (equity * 0.01) / risk
         tp = entry + risk if momentum_up else entry - risk
         order = {
-            'pair': None,
+            'pair': multi_df.get('pair'),
             'type': 'buy' if momentum_up else 'sell',
             'entry': entry,
             'stop': stop,

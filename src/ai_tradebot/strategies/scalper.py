@@ -50,7 +50,7 @@ def analyse_scalper(multi_df: dict, equity: float) -> dict:
             position_size = (equity * risk_pct) / risk
             tp1 = entry + risk
             order = {
-                'pair': None,
+                'pair': multi_df.get('pair'),
                 'type': 'buy',
                 'entry': entry,
                 'stop': stop,
@@ -67,7 +67,7 @@ def analyse_scalper(multi_df: dict, equity: float) -> dict:
             position_size = (equity * risk_pct) / risk
             tp1 = entry - risk
             order = {
-                'pair': None,
+                'pair': multi_df.get('pair'),
                 'type': 'sell',
                 'entry': entry,
                 'stop': stop,

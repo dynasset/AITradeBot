@@ -1,7 +1,2 @@
-from dotenv import load_dotenv
-import os
-
-load_dotenv()
-
-KRAKEN_API_KEY = os.getenv("KRAKEN_API_KEY")
-KRAKEN_API_SECRET = os.getenv("KRAKEN_API_SECRET")
+KRAKEN_API_KEY = "yZg5R2PLVo7dq6hZ+LEHlYPQTh47se77WOd4aZ3BcY6US9BAl8IR9ofj"
+KRAKEN_API_SECRET = "hq5IXBnpIxooZbnFGjzFAudjtjAAJIBsUHpVibWcGaxpcMFRpkZuRGBUAvVFN2DY5vR5Afnprvalvzks6JC4UA=="

@@ -180,28 +180,45 @@ class KrakenService:
 
     def get_ohlc(self, pair: str, interval: int = 1, limit: int = 100):
         import pandas as pd
+        import time
         url = "https://api.kraken.com/0/public/OHLC"
         params = {"pair": pair, "interval": interval}
-        try:
-            response = requests.get(url, params=params)
-            response.raise_for_status()
-            data = response.json()
-            result = data.get("result", {})
-            ohlc = None
-            for k in result:
-                if k != "last":
-                    ohlc = result[k]
-                    break
-            if not ohlc:
-                return None
-            df = pd.DataFrame(ohlc, columns=[
-                "time", "open", "high", "low", "close", "vwap", "volume", "count"
-            ])
+        max_retries = 3
+        for attempt in range(1, max_retries + 1):
             try:
-                df = df.apply(pd.to_numeric)
+                response = requests.get(url, params=params)
+                response.raise_for_status()
+                data = response.json()
+                result = data.get("result", {})
+                ohlc = None
+                for k in result:
+                    if k != "last":
+                        ohlc = result[k]
+                        break
+                if not ohlc:
+                    return None
+                df = pd.DataFrame(ohlc, columns=[
+                    "time", "open", "high", "low", "close", "vwap", "volume", "count"
+                ])
+                try:
+                    df = df.apply(pd.to_numeric)
+                except Exception as e:
+                    logging.warning(f"Kon sommige kolommen niet converteren naar numeriek: {e}")
+                return df.tail(limit)
+            except requests.exceptions.HTTPError as e:
+                status_code = getattr(e.response, 'status_code', None)
+                if status_code == 502 and attempt < max_retries:
+                    logging.warning(f"502 Bad Gateway bij ophalen OHLC data voor {pair} ({interval}m), poging {attempt}. Retry over 5s...")
+                    time.sleep(5)
+                    continue
+                else:
+                    logging.error(f"Fout bij ophalen OHLC data voor {pair} ({interval}m): {e}")
+                    return None
             except Exception as e:
-                logging.warning(f"Kon sommige kolommen niet converteren naar numeriek: {e}")
-            return df.tail(limit)
-        except Exception as e:
-            logging.error(f"Fout bij ophalen OHLC data voor {pair} ({interval}m): {e}")
-            return None
+                if attempt < max_retries:
+                    logging.warning(f"Netwerkfout bij ophalen OHLC data voor {pair} ({interval}m), poging {attempt}. Retry over 5s...")
+                    time.sleep(5)
+                    continue
+                else:
+                    logging.error(f"Fout bij ophalen OHLC data voor {pair} ({interval}m): {e}")
+                    return None
